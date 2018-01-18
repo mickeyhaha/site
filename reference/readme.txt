@@ -1,0 +1,1 @@
+http://www.shengquan.com/statics/
