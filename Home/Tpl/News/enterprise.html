@@ -39,6 +39,54 @@
 	<{:R('Public/header', '', 'Widget')}>
 	<include file="Public:img_bar"/>
 
+    <div class="n_m">
+        <div class="dp_wz">
+            <div class="dp_wz_l">当前位置： <a href="/">圣泉集团</a> &gt; <a href="http://www.shengquan.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=63">新闻中心</a> &gt; <a href="http://www.shengquan.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=71">社会责任</a> &gt;  <b>列表</b></div>
+            <div class="dp_wz_r">
+                <div id="ckepop" style="text-align:right">
+                    <!-- JiaThis Button BEGIN -->
+                    <div class="jiathis_style"> <a class="jiathis_button_tsina" title="分享到微博"><span class="jiathis_txt jiathis_separator jtico jtico_tsina">新浪微博</span></a> <a class="jiathis_button_weixin" title="分享到微信"><span class="jiathis_txt jiathis_separator jtico jtico_weixin">微信</span></a> </div>
+                    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1390014170747401" charset="utf-8"></script><script type="text/javascript" src="http://v3.jiathis.com/code/plugin.client.js" charset="utf-8"></script>
+                    <!-- JiaThis Button END -->
+                </div>
+            </div>
+        </div>
+        <div class="l_menu">
+            <a href="__APP__/News/enterprise">企业动态</a>
+            <a href="__APP__/News/industry">行业资讯</a>
+        </div>
+        <div class="n_r">
+            <div class="position"></div>
+
+            <div class="news_list">
+                <ul class="n_r1">
+                <volist name="list" id="vo">
+                    <li>
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        <span class="news_title">
+	            		        	<a href="__APP__/News/enterprise_info/id/<{$vo.id}>"><{$vo.title}></a>
+	            		        </span>
+                        <span class="news_time"><{$vo.create_time}></span>
+                    </li>
+                </volist>
+                </ul>
+            </div>
+
+            <ul class="n_r1">
+                <li> <i><img width="140" height="100" src="http://www.shengquan.com/uploadfile/2014/0827/20140827030015766.jpg"></i>
+                    <div><a href="http://www.shengquan.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=71&amp;id=116" class="t">唐和唐大福降荣获“消费者放心健康产品”奖 </a> <em>[来源]：社会责任　[时间]：2011-03-12　[关注]：252</em>
+                        2011年3月15日，全国消费者放心日的当天，唐和唐大福降凭借良好的口碑荣获消费者放心健康产品奖</div>
+                    <s></s> </li>
+            </ul>
+
+            <div class="pageBar"><{$pageBar}></div>
+        </div>
+        <div class="n_top"><img src="" border="0" usemap="#Map"></div>
+        <map name="Map" id="Map">
+            <area shape="rect" coords="276,2,335,20" href="#">
+        </map>
+    </div>
+
 	<div id="main">
 		<div class="container" id="summary-container">
 	        <div class="row">

@@ -1,9 +1,14 @@
+<link href="__PUBLIC__/css/common.css" rel="stylesheet">
+<link href="__PUBLIC__/css/index.css" rel="stylesheet">
+<link href="__PUBLIC__/css/ny.css" rel="stylesheet">
+<script src="__PUBLIC__/Js/sq_common.js"></script>
+
 <style type="text/css">
 	.top{
 		width: 100%;
 		height: 64px;
 		background-image: url("__PUBLIC__/Uploads/logos/logo-bg.png");
-		background-repeat: repeat-x; 
+		background-repeat: repeat-x;
 	}
 	.top img{
 		float: left;
@@ -71,7 +76,7 @@
 		margin-left: 13%;
 	}
 
-	#menu li{	
+	#menu li{
 		margin: 0;
 		padding: 0;
 		list-style: none;
@@ -79,7 +84,7 @@
 		font: bold 12px arial;
 	}
 
-	#menu li a{	
+	#menu li a{
 		display: block;
 		margin: 0 1px 0 0;
 		padding: 7px 0 0px 0;
@@ -95,11 +100,11 @@
 		font-family: "微软雅黑" !important;
 	}
 
-	#menu li a:hover{	
-		background: #ECABA8;  
+	#menu li a:hover{
+		background: #ECABA8;
 	}
 
-	#menu div{	
+	#menu div{
 		position: absolute;
 		visibility: hidden;
 		margin: 0;
@@ -114,12 +119,12 @@
 		left: 40px;
 		width: 0;
 		height: 0;
-		border-left: 12px solid transparent;  
-		border-right: 12px solid transparent; 
+		border-left: 12px solid transparent;
+		border-right: 12px solid transparent;
 		border-bottom: 12px solid #AB0900;
 	}
 
-	#menu div a{	
+	#menu div a{
 		position: relative;
 		display: block;
 		margin: 0;
@@ -139,23 +144,22 @@
 		font-family: "微软雅黑" !important;
 	}
 
-	#menu div a:hover{	
+	#menu div a:hover{
 		background: #ECABA8;
 		color: #FFF;
 		z-index: 100;
 	}
 </style>
-<!--
-	<link href="__PUBLIC__/css/common.css" rel="stylesheet">
-	<link href="__PUBLIC__/css/index.css" rel="stylesheet">
 
-<div class="topbar"><s><span id="mytime">您好</span>，XX公司感谢您的到来！</s>  <i>|　<a href="#here" onclick="javascript:addFavorite2()">加入收藏</a>　|　<a href="http://www.shengquan.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=134">联系我们</a> </i></div>
--->
+<div class="topbar">
+    <s><span id="mytime">您好</span>，XX公司感谢您的到来！</s>
+    <i> |　<a href="#here" onclick="javascript:addFavorite2()">加入收藏</a>　|　<a href="#">联系我们</a>　|　<a href="__ROOT__/Admin.php/Index/index">管理登录</a>　|</i></div>
+
 <div>
 	<div class="top">
 		<img class="logo" src="__PUBLIC__/Uploads/logos/logo.png" alt="logo">
 		<img class="logo-right" src="__PUBLIC__/Uploads/logos/logo-right.png" alt="">
-      	<div id="search">
+      	<div id="search" style="display: none">
   			<div class="input-group">
   				<form action="__APP__/Public/search" method="get">
   		    	    <input type="text" id="search-text" name="search" class="form-control" placeholder="请输入关键字" value="<{$keyword}>">
@@ -165,7 +169,7 @@
   			    </form>
   			</div>
       	</div>
-		<div class="btn-group">
+		<div class="btn-group" style="display: none">
 		  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 		    登录入口 <span class="caret"></span>
 		  	</button>
@@ -183,50 +187,7 @@
 				<a class="menu-as" href="__APP__/Index" onmouseover="mopen('m1')" onmouseout="mclosetime()">首页</a>
 			</li>
 			<li>
-				<a class="menu-as" href="__APP__/Service/product_introduction" onmouseover="mopen('m2')" onmouseout="mclosetime()">商户服务</a>
-				<div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-					<span></span>
-					<a href="__APP__/Service/product_introduction">产品介绍</a>
-					<a href="__APP__/Service/pos_install">POS机具安装维护</a>
-					<a href="__APP__/Service/data_analysis">交易数据系统分析</a>
-					<a href="__APP__/Service/capital_settlement">资金结算差错处理</a>
-					<a href="__APP__/Service/online_transactions">在线交易监控</a>
-					<a href="__APP__/Service/business_training">商户培训</a>
-				</div>
-			</li>
-			<li>
-				<a class="menu-as" href="__APP__/Personalpay/product_introduction" onmouseover="mopen('m3')" onmouseout="mclosetime()">理财投资</a>
-				<div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-					<span></span>
-					<a href="__APP__/Personalpay/product_introduction">产品介绍</a>
-				</div>
-			</li>
-			<li>
-				<a class="menu-as" href="__APP__/News/enterprise" onmouseover="mopen('m4')" onmouseout="mclosetime()">新闻资讯</a>
-				<div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-					<span></span>
-					<a href="__APP__/News/enterprise">企业动态</a>
-					<a href="__APP__/News/industry">行业资讯</a>
-				</div>
-			</li>
-			<li>
-				<a class="menu-as" href="__APP__/Cooperateman/index" onmouseover="mopen('m5')" onmouseout="mclosetime()">合作伙伴</a>
-			</li>
-			<li>
-				<a href="__APP__/Financialknows/rmb" onmouseover="mopen('m6')" onmouseout="mclosetime()">金融知识</a>
-				<div id="m6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-					<span></span>
-					<a href="__APP__/Financialknows/rmb">人民币知识</a>
-					<a href="__APP__/Financialknows/bank_card">银行卡知识</a>
-					<a href="__APP__/Financialknows/anti_money">反洗钱知识</a>
-					<a href="__APP__/Financialknows/pay">支付结算知识</a>
-					<a href="__APP__/Financialknows/financial_security">个人金融信息安全</a>
-					<a href="__APP__/Financialknows/financial_law">金融法律法规解答</a>
-					<a href="__APP__/Financialknows/financial_knows">金融知识普及读本</a>
-				</div>
-			</li>
-			<li>
-				<a class="menu-as" href="__APP__/Aboutus/company_introduce" onmouseover="mopen('m7')" onmouseout="mclosetime()">关于我们</a>
+				<a class="menu-as" href="__APP__/Aboutus/company_introduce" onmouseover="mopen('m7')" onmouseout="mclosetime()">公司简介</a>
 				<div id="m7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
 					<span></span>
 					<a href="__APP__/Aboutus/company_introduce">公司介绍</a>
@@ -240,23 +201,35 @@
 				</div>
 			</li>
 			<li>
-				<a class="menu-as" href="__APP__/Merchantaccess/access_process" onmouseover="mopen('m8')" onmouseout="mclosetime()">商家接入</a>
-				<div id="m8" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+				<a class="menu-as" href="__APP__/News/enterprise" onmouseover="mopen('m4')" onmouseout="mclosetime()">新闻资讯</a>
+				<div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
 					<span></span>
-					<a href="__APP__/Merchantaccess/access_process">接入流程</a>
-					<a href="__APP__/Merchantaccess/operating_advantage">运营服务优势</a>
-					<a href="__APP__/Merchantaccess/background_advantage">后台支撑优势</a>
-					<a href="__APP__/Merchantaccess/pos_problems">POS机办理问题</a>
+					<a href="__APP__/News/enterprise">企业动态</a>
+					<a href="__APP__/News/industry">行业资讯</a>
 				</div>
 			</li>
 			<li>
-				<a class="menu-as" href="__APP__/Joinus/index" onmouseover="mopen('m9')" onmouseout="mclosetime()">加盟我们</a>
+				<a class="menu-as" href="__APP__/Service/product_introduction" onmouseover="mopen('m2')" onmouseout="mclosetime()">产品展示</a>
+				<div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+					<span></span>
+					<a href="__APP__/Service/product_introduction">产品介绍</a>
+					<a href="__APP__/Service/pos_install">POS机具安装维护</a>
+					<a href="__APP__/Service/data_analysis">交易数据系统分析</a>
+					<a href="__APP__/Service/capital_settlement">资金结算差错处理</a>
+					<a href="__APP__/Service/online_transactions">在线交易监控</a>
+					<a href="__APP__/Service/business_training">商户培训</a>
+				</div>
+			</li>
+			<li>
+				<a class="menu-as" href="__APP__/Cooperateman/index" onmouseover="mopen('m5')" onmouseout="mclosetime()">合作伙伴</a>
+			</li>
+			<li>
+				<a class="menu-as" href="__APP__/Joinus/index" onmouseover="mopen('m9')" onmouseout="mclosetime()">联系我们</a>
 			</li>
 		</ul>
 	</div>
 </div>
 
-    <script src="__PUBLIC__/Js/sq_common.js"></script>
 
 <script type="text/javascript">
 	var timeout         = 200;

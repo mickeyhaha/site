@@ -15,12 +15,12 @@
 .ban_box{width:1140px; height:569px; margin:auto; position:relative; overflow:hidden}
 .ban_s{width:100%; position:absolute; bottom:30px; left:0; z-index:10}
 .ban_s li{float:left; width:20%; font:bold 18px/34px 微软雅黑; text-align:center}
-.ban_s li a{display:block; height:138px; padding:20px 0 0; background:url(../../images/cn_img/icon06.png) center -234px; opacity:0.5; color:#fff; box-sizing:border-box; border:solid 1px #fff;}
-.ban_s li a:hover, .ban_s li.KMSPrefix_kinMaxShow_focus a{opacity:1; padding:19px 0 0; background:url(../../images/cn_img/icon06.png) center -34px; color:#fff; border:solid 2px #fff;}
+.ban_s li a{display:block; height:138px; padding:20px 0 0; background:url(../images/cn_img/icon06.png) center -234px; opacity:0.5; color:#fff; box-sizing:border-box; border:solid 1px #fff;}
+.ban_s li a:hover, .ban_s li.KMSPrefix_kinMaxShow_focus a{opacity:1; padding:19px 0 0; background:url(../images/cn_img/icon06.png) center -34px; color:#fff; border:solid 2px #fff;}
 
 
 
-.news{background:url(../../images/cn_img/title01.png) no-repeat 0 0; width:1080px; position:relative; margin:70px 0 0; padding:60px 0 0; overflow:hidden}
+.news{background:url(../images/cn_img/title01.png) no-repeat 0 0; width:1080px; position:relative; margin:70px 0 0; padding:60px 0 0; overflow:hidden}
 .news a{color:#404145}
 .news a:hover{color:#f60}
 .more{ position:absolute; color:#909090; right:0; top:0px; font-size:14px;}
@@ -31,23 +31,23 @@
 .picnews a:hover b{color:#f60;}
 
 .newslist{width:510px; line-height:2.1; margin-top:20px;}
-.newslist li{padding-left:24px; background:url(../../images/cn_img/icon01.png) no-repeat 4px center; font-size:14px; color:#909090}
+.newslist li{padding-left:24px; background:url(../images/cn_img/icon01.png) no-repeat 4px center; font-size:14px; color:#909090}
 .newslist li i{float:right}
 
 
-.product{background:url(../../images/cn_img/title02.png) no-repeat 0 0; margin:70px 0 0; padding:60px 0 0; position:relative;}
+.product{margin:2px 0 0; padding:2px 0 0; width: 980px; position:relative;}
 .pro_btn{position:absolute; right:0; top:30px; width:50px;}
-.pro_btn a{display:block; float:left; width:25px; height:20px; background-image:url(../../images/cn_img/icon03.png); background-repeat:no-repeat;}
+.pro_btn a{display:block; float:left; width:25px; height:20px; background-image:url(../images/cn_img/icon03.png); background-repeat:no-repeat;}
 a.pro_b{}
 a.pro_b:hover{background-position:0 -20px;}
 a.pro_f{background-position:-25px 0;}
 a.pro_f:hover{background-position:-25px -20px;}
 
-.pro_box{position:relative; overflow:hidden; width:1080px;}
+.pro_box{position:relative; overflow:hidden; width:100%;}
 .pro_list{width:2500px; line-height:50px;  font-size:16px;}
-.pro_list li{width:250px; float:left; margin-right:27px;}
+.pro_list li{width:230px; float:left; margin-right:27px;}
 .pro_list a{display:block; border-top:solid 2px #69318e; color:#69318e}
-.pro_list img{width:250px; height:180px;}
+.pro_list img{width:240px; height:180px;}
 
 .pro_list li.p2 a{border-top:solid 2px #008ccf; color:#008ccf}
 .pro_list li.p3 a{border-top:solid 2px #3ac267; color:#3ac267}
@@ -58,13 +58,13 @@ a.pro_f:hover{background-position:-25px -20px;}
 .ec_list li{float:left; width:216px; font-size:14px; line-height:24px;}
 .ec_list li a{display:block; height:80px; color:#d3d3d3; position:relative; overflow:hidden}
 .ec_list b{color:#404145; font-size:18px; display:block}
-.ec_list span{display:block; position:absolute; left:0; padding:17px 0 0 80px; width:136px; height:63px; background-image:url(../../images/cn_img/icon02.png); background-repeat:no-repeat; background-position:20px center;}
+.ec_list span{display:block; position:absolute; left:0; padding:17px 0 0 80px; width:136px; height:63px; background-image:url(../images/cn_img/icon02.png); background-repeat:no-repeat; background-position:20px center;}
 .ec_list li.e2 span{background-position:-204px center;}
 .ec_list li.e3 span{background-position:-428px center;}
 .ec_list li.e4 span{background-position:-652px center;}
 .ec_list li.e5 span{background-position:-876px center;}
 .ec_list .out{top:0px;}
-.ec_list .over{top:80px; color:#fff; background-image:url(../../images/cn_img/icon02-.png)}
+.ec_list .over{top:80px; color:#fff; background-image:url(../images/cn_img/icon02-.png)}
 .ec_list .over b{color:#fff;}
 .ec_list .bg {top:-80px; background:#69318e; width:216px; height:80px; padding:0;}
 
