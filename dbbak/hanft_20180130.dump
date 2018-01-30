@@ -1,0 +1,295 @@
+-- MySQL dump 10.13  Distrib 5.6.38, for Win32 (AMD64)
+--
+-- Host: localhost    Database: hanft
+-- ------------------------------------------------------
+-- Server version	5.5.53
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `wf_contact_info`
+--
+
+DROP TABLE IF EXISTS `wf_contact_info`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wf_contact_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `tel` varchar(30) NOT NULL,
+  `contacter` varchar(40) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wf_contact_info`
+--
+
+LOCK TABLES `wf_contact_info` WRITE;
+/*!40000 ALTER TABLE `wf_contact_info` DISABLE KEYS */;
+INSERT INTO `wf_contact_info` VALUES (1,'Contact us','5555-3332-3354','Jason (13761737777)');
+/*!40000 ALTER TABLE `wf_contact_info` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wf_download_list`
+--
+
+DROP TABLE IF EXISTS `wf_download_list`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wf_download_list` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `filename` varchar(100) NOT NULL,
+  `real_filename` varchar(100) NOT NULL,
+  `filesize` varchar(30) NOT NULL,
+  `update_time` varchar(25) NOT NULL,
+  `download_times` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wf_download_list`
+--
+
+LOCK TABLES `wf_download_list` WRITE;
+/*!40000 ALTER TABLE `wf_download_list` DISABLE KEYS */;
+INSERT INTO `wf_download_list` VALUES (8,'qq.exe','QQ','1332KB','2014-10-31 10:46:44',2);
+/*!40000 ALTER TABLE `wf_download_list` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wf_enterprise_news`
+--
+
+DROP TABLE IF EXISTS `wf_enterprise_news`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wf_enterprise_news` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `create_time` varchar(25) NOT NULL,
+  `source` varchar(30) DEFAULT NULL,
+  `read_times` int(11) NOT NULL,
+  `content` text NOT NULL,
+  `author` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wf_enterprise_news`
+--
+
+LOCK TABLES `wf_enterprise_news` WRITE;
+/*!40000 ALTER TABLE `wf_enterprise_news` DISABLE KEYS */;
+INSERT INTO `wf_enterprise_news` VALUES (7,'xinwen','2018-01-27 21:16:02','xinwen',1,'&lt;p&gt;xinwen&lt;/p&gt;','xinwen'),(6,'test','2018-01-15 16:05:49','doc',1,'&lt;p&gt;testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest&lt;/p&gt;','auth');
+/*!40000 ALTER TABLE `wf_enterprise_news` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wf_job_apply`
+--
+
+DROP TABLE IF EXISTS `wf_job_apply`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wf_job_apply` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  `sex` char(4) NOT NULL,
+  `nation` varchar(40) NOT NULL,
+  `birthday` varchar(50) DEFAULT NULL,
+  `height` varchar(20) DEFAULT NULL,
+  `experience` varchar(100) NOT NULL,
+  `marital_status` char(8) DEFAULT NULL,
+  `household` varchar(40) DEFAULT NULL,
+  `now_addr` varchar(120) NOT NULL,
+  `degrees` varchar(30) NOT NULL,
+  `graduate_school` varchar(60) NOT NULL,
+  `major` varchar(40) NOT NULL,
+  `graduate_time` varchar(25) NOT NULL,
+  `foreign_level` varchar(50) DEFAULT NULL,
+  `now_job` varchar(60) DEFAULT NULL,
+  `tel` varchar(50) DEFAULT NULL,
+  `phone` varchar(50) NOT NULL,
+  `email` varchar(60) NOT NULL,
+  `contact_addr` varchar(100) NOT NULL,
+  `evaluation` text,
+  `resume` text NOT NULL,
+  `job_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wf_job_apply`
+--
+
+LOCK TABLES `wf_job_apply` WRITE;
+/*!40000 ALTER TABLE `wf_job_apply` DISABLE KEYS */;
+/*!40000 ALTER TABLE `wf_job_apply` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wf_job_describe`
+--
+
+DROP TABLE IF EXISTS `wf_job_describe`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wf_job_describe` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `numbers` int(11) NOT NULL,
+  `type` varchar(30) NOT NULL,
+  `experience` varchar(20) NOT NULL,
+  `area` varchar(20) NOT NULL,
+  `degrees` varchar(20) NOT NULL,
+  `treatment` varchar(100) NOT NULL,
+  `create_time` varchar(25) NOT NULL,
+  `end_time` varchar(25) NOT NULL,
+  `describe_require` text NOT NULL,
+  `tel` varchar(50) NOT NULL,
+  `email` varchar(60) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wf_job_describe`
+--
+
+LOCK TABLES `wf_job_describe` WRITE;
+/*!40000 ALTER TABLE `wf_job_describe` DISABLE KEYS */;
+INSERT INTO `wf_job_describe` VALUES (7,'销售总监',2,'全职','3-5年','上海','大专及以上','免疫','2018-01-30 16:04:01','2018-12-01','&lt;p&gt;招聘华东，华北销售总监各1名。&lt;/p&gt;','13777777777','57383604@qq.com');
+/*!40000 ALTER TABLE `wf_job_describe` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wf_joinus`
+--
+
+DROP TABLE IF EXISTS `wf_joinus`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wf_joinus` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  `area` varchar(100) NOT NULL,
+  `email` varchar(40) NOT NULL,
+  `tel` varchar(30) NOT NULL,
+  `position` varchar(1024) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wf_joinus`
+--
+
+LOCK TABLES `wf_joinus` WRITE;
+/*!40000 ALTER TABLE `wf_joinus` DISABLE KEYS */;
+/*!40000 ALTER TABLE `wf_joinus` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wf_lunbo_imgs`
+--
+
+DROP TABLE IF EXISTS `wf_lunbo_imgs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wf_lunbo_imgs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `imgname` varchar(100) NOT NULL,
+  `real_imgname` varchar(100) NOT NULL,
+  `size` varchar(30) NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wf_lunbo_imgs`
+--
+
+LOCK TABLES `wf_lunbo_imgs` WRITE;
+/*!40000 ALTER TABLE `wf_lunbo_imgs` DISABLE KEYS */;
+INSERT INTO `wf_lunbo_imgs` VALUES (1,'img1.png','鍥剧墖1','13200KB',1),(2,'img2.png','鍥剧墖2','23234KB',1),(3,'img3.png','鍥剧墖3','16534KB',1),(4,'img4.png','鍥剧墖4','5434KB',0),(5,'img5.png','鍥剧墖5','5434KB',0),(6,'img6.png','鍥剧墖6','5434KB',0);
+/*!40000 ALTER TABLE `wf_lunbo_imgs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wf_static_pages`
+--
+
+DROP TABLE IF EXISTS `wf_static_pages`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wf_static_pages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ch_title` varchar(50) NOT NULL,
+  `en_title` varchar(20) NOT NULL,
+  `content` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wf_static_pages`
+--
+
+LOCK TABLES `wf_static_pages` WRITE;
+/*!40000 ALTER TABLE `wf_static_pages` DISABLE KEYS */;
+INSERT INTO `wf_static_pages` VALUES (1,'pos_install','pos_install','<p><img src=\"/ueditor/php/upload/image/20180130/1517301419386898.jpg\" alt=\"1517301419386898.jpg\"/></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 16px;\">玉米芯磨料是用玉米棒破碎加工再经过严格筛选制成，具有组织均匀、硬度适宜、韧性好、吸水性强、耐磨性能好等优点，在使用过程中不易破碎。</span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 16px;\">玉米芯颗粒粉是选用优质玉米芯加工而成，为米色或黄褐色。各项指标及微生物指标均符合国内和国际标准。</span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-weight: 700;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 24px; background: rgb(255, 102, 0);\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px;\">玉米芯用途：</span></span></span><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-weight: 700;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 21px;\">　　&nbsp;&nbsp;</span></span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 16px;\">玉米芯磨料用于眼镜、钮扣、电子元件、汽车零部件、磁性材料的抛光和干燥、擦干处理。被加工件表面光亮，光洁度高，工件表面没有水纹痕迹。</span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-weight: 700;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 24px; background: rgb(255, 102, 0);\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px;\">玉米芯理化性能指标：</span></span></span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 16px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px;\">比</span>&nbsp;&nbsp;重&nbsp;1.28；硬&nbsp;度2.5—3.0MOH；酸度3—6PH；壳含量90.90%；水份含量8.7%</span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-weight: 700;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 24px; background: rgb(255, 102, 0);\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px;\">玉米芯产品规格：</span></span></span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 16px;\">5#　5.00—4.00mm,&nbsp;6#　4.00-3.15mm,&nbsp;8#　2.80—2.36mm，10#&nbsp;2.00—1.80mm,&nbsp;12#&nbsp;1.70—2.50mm,&nbsp;14#&nbsp;1.40—1.25mm，16#&nbsp;1.180—1.060mm,&nbsp;20#&nbsp;0.950—0.850mm,&nbsp;24#&nbsp;0.800—0.630mm</span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-weight: 700;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 24px; background: rgb(255, 102, 0);\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px;\">玉米芯包装方式：</span></span></span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 16px;\">25kg/袋，双层编织袋包装，可按客户要求进</span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240);\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 14px;\">&nbsp;</span></p><p><br/></p>'),(2,'data_analysis','data_analysis','<p>玉米芯10#</p>'),(3,'capital_settlement','capital_settlement','<p>玉米芯12#</p>'),(4,'online_transactions','online_transactions','<p>玉米芯14#</p>'),(5,'business_training','business_training','<p><br/></p><p>玉米芯16#</p>'),(6,'product_introduction','product_introduction','<p><img src=\"/ueditor/php/upload/image/20180130/1517300933121754.jpg\" alt=\"1517300933121754.jpg\"/></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 16px;\">玉米芯磨料是用玉米棒破碎加工再经过严格筛选制成，具有组织均匀、硬度适宜、韧性好、吸水性强、耐磨性能好等优点，在使用过程中不易破碎。</span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 16px;\">玉米芯颗粒粉是选用优质玉米芯加工而成，为米色或黄褐色。各项指标及微生物指标均符合国内和国际标准。</span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-weight: 700;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 24px; background: rgb(255, 102, 0);\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px;\">玉米芯用途：</span></span></span><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-weight: 700;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 21px;\">　　&nbsp;&nbsp;</span></span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 16px;\">玉米芯磨料用于眼镜、钮扣、电子元件、汽车零部件、磁性材料的抛光和干燥、擦干处理。被加工件表面光亮，光洁度高，工件表面没有水纹痕迹。</span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-weight: 700;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 24px; background: rgb(255, 102, 0);\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px;\">玉米芯理化性能指标：</span></span></span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 16px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px;\">比</span>&nbsp;&nbsp;重&nbsp;1.28；硬&nbsp;度2.5—3.0MOH；酸度3—6PH；壳含量90.90%；水份含量8.7%</span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-weight: 700;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 24px; background: rgb(255, 102, 0);\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px;\">玉米芯产品规格：</span></span></span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 16px;\">5#　5.00—4.00mm,&nbsp;6#　4.00-3.15mm,&nbsp;8#　2.80—2.36mm，10#&nbsp;2.00—1.80mm,&nbsp;12#&nbsp;1.70—2.50mm,&nbsp;14#&nbsp;1.40—1.25mm，16#&nbsp;1.180—1.060mm,&nbsp;20#&nbsp;0.950—0.850mm,&nbsp;24#&nbsp;0.800—0.630mm</span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-weight: 700;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 24px; background: rgb(255, 102, 0);\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px;\">玉米芯包装方式：</span></span></span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240); line-height: 28px;\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 16px;\">25kg/袋，双层编织袋包装，可按客户要求进</span></p><p style=\"box-sizing: border-box; padding: 0px; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify; white-space: normal; background-color: rgb(240, 241, 240);\"><span style=\"box-sizing: border-box; padding: 0px; margin: 0px; font-family: 宋体; font-size: 14px;\">&nbsp;</span></p><p><br/></p>'),(7,'行业资讯','industry','<p><br/></p><p>行业资讯</p>'),(8,'rmb','rmb','杩欓噷鏄?垵濮嬪寲鍐呭?锛岀?鐞嗗憳鍙?互鍒扮綉绔欏悗鍙板幓瀵归〉闈㈠唴瀹硅繘琛岀紪杈'),(9,'bank_card','bank_card','杩欓噷鏄?垵濮嬪寲鍐呭?锛岀?鐞嗗憳鍙?互鍒扮綉绔欏悗鍙板幓瀵归〉闈㈠唴瀹硅繘琛岀紪杈'),(10,'anti_money\n','anti_money','杩欓噷鏄?垵濮嬪寲鍐呭?锛岀?鐞嗗憳鍙?互鍒扮綉绔欏悗鍙板幓瀵归〉闈㈠唴瀹硅繘琛岀紪杈'),(11,'pay','pay','杩欓噷鏄?垵濮嬪寲鍐呭?锛岀?鐞嗗憳鍙?互鍒扮綉绔欏悗鍙板幓瀵归〉闈㈠唴瀹硅繘琛岀紪杈'),(12,'financial_security\n','financial_security','杩欓噷鏄?垵濮嬪寲鍐呭?锛岀?鐞嗗憳鍙?互鍒扮綉绔欏悗鍙板幓瀵归〉闈㈠唴瀹硅繘琛岀紪杈'),(13,'financial_law','financial_law','杩欓噷鏄?垵濮嬪寲鍐呭?锛岀?鐞嗗憳鍙?互鍒扮綉绔欏悗鍙板幓瀵归〉闈㈠唴瀹硅繘琛岀紪杈'),(14,'financial_knows','financial_knows','杩欓噷鏄?垵濮嬪寲鍐呭?锛岀?鐞嗗憳鍙?互鍒扮綉绔欏悗鍙板幓瀵归〉闈㈠唴瀹硅繘琛岀紪杈'),(15,'公司介绍','company_introduce','<p><br/></p><p>公司介绍</p>'),(16,'团队优势','team_advantage','<p><br/></p><p>团队优势</p>'),(17,'风险控制','risk_control','<p><br/></p><p>风险控制</p>'),(18,'企业文化','enterprise_culture','<p><br/></p><p>企业文化</p>'),(19,'公司组织架构','company_structure','<p><br/></p><p>公司组织架构</p>'),(20,'联系我们','contact_us','<p><br/></p><p>联系我们</p>'),(21,'access_process','access_process','杩欓噷鏄?垵濮嬪寲鍐呭?锛岀?鐞嗗憳鍙?互鍒扮綉绔欏悗鍙板幓瀵归〉闈㈠唴瀹硅繘琛岀紪杈'),(22,'operating_advantage','operating_advantage','杩欓噷鏄?垵濮嬪寲鍐呭?锛岀?鐞嗗憳鍙?互鍒扮綉绔欏悗鍙板幓瀵归〉闈㈠唴瀹硅繘琛岀紪杈'),(23,'background_advantage','background_advantage','杩欓噷鏄?垵濮嬪寲鍐呭?锛岀?鐞嗗憳鍙?互鍒扮綉绔欏悗鍙板幓瀵归〉闈㈠唴瀹硅繘琛岀紪杈'),(24,'pos_problems','pos_problems','杩欓噷鏄?垵濮嬪寲鍐呭?锛岀?鐞嗗憳鍙?互鍒扮綉绔欏悗鍙板幓瀵归〉闈㈠唴瀹硅繘琛岀紪杈');
+/*!40000 ALTER TABLE `wf_static_pages` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wf_user`
+--
+
+DROP TABLE IF EXISTS `wf_user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wf_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(32) NOT NULL,
+  `role` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wf_user`
+--
+
+LOCK TABLES `wf_user` WRITE;
+/*!40000 ALTER TABLE `wf_user` DISABLE KEYS */;
+INSERT INTO `wf_user` VALUES (1,'wangfan','e10adc3949ba59abbe56e057f20f883e',1),(3,'admin','21232f297a57a5a743894a0e4a801fc3',1);
+/*!40000 ALTER TABLE `wf_user` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-01-30 17:27:13
